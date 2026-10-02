@@ -2,9 +2,9 @@
 
 ## Description
 
-This project focuses on predicting diabetes using machine learning techniques applied to the Pima Indians Diabetes Database.
+This project focuses on diabetes classification using machine learning techniques applied to the Pima Indians Diabetes Database.
 
-The notebook includes data exploration, correlation analysis, class balancing using Random OverSampling, model training, and Stratified K-Fold Cross-Validation.
+The notebook covers data exploration, correlation analysis, class balancing, data preprocessing, dimensionality reduction, model training, cross-validation, and model evaluation.
 
 ## Dataset
 
@@ -12,23 +12,27 @@ The project uses the Pima Indians Diabetes Database.
 
 The target variable is `Outcome`:
 
-- `1` — Diabetes
 - `0` — No Diabetes
+- `1` — Diabetes
 
-## Data Analysis
+## Exploratory Data Analysis
 
 The notebook includes:
 
-- Data loading
-- Exploratory data analysis
-- Dataset information and descriptive statistics
+- Dataset loading
+- Dataset structure and information
+- Descriptive statistics
 - Missing-value checking
-- Distribution analysis of the target variable
+- Analysis of the target variable distribution
 - Correlation matrix visualization
 
 ## Data Preprocessing
 
-Random OverSampling is applied to address the imbalance between the two classes.
+The following preprocessing techniques are used:
+
+- Random OverSampling to address class imbalance
+- StandardScaler for feature standardization
+- Principal Component Analysis (PCA) for dimensionality reduction
 
 ## Machine Learning Models
 
@@ -36,20 +40,23 @@ The following classification models are evaluated:
 
 - Logistic Regression
 - Random Forest
-- Gradient Boosting
 - Decision Tree
+- Gradient Boosting
 - XGBoost
 
 ## Model Evaluation
 
 The models are evaluated using Stratified 5-Fold Cross-Validation.
 
-The notebook also includes:
+The notebook calculates:
 
-- Accuracy comparison
-- Classification metrics
-- Confusion matrices
-- Comparison of model performance across folds
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confidence intervals for accuracy
+
+Confusion matrices are also generated for the best-performing fold of each model.
 
 ## Technologies
 
@@ -67,5 +74,10 @@ The notebook also includes:
 ## Project Structure
 
 ```text
-Diabetes_Prediction_Machine_Learning.ipynb
-README.md
+Machine-learning-project-for-diabetes-prediction/
+│
+├── data/
+│   └── diabetes.csv
+│
+├── Diabetes_Prediction_Machine_Learning.ipynb
+└── README.md
